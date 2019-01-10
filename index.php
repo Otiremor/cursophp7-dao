@@ -24,18 +24,24 @@ $usuario->login("root", "!@#$");
 //$usuario->login("root", "!@#$123"); //Usuário errado, senha está errado.
 echo $usuario;*/
 
-//Criando um novo usuário
+/*Criando um novo usuário
 /*$aluno = new Usuario("aluno", "@lun0"); //Fazemos assim quando usamos o metodo construtor.
 /*$aluno->setDeslogin("aluno");
 $aluno->setDessenha("@lun0");
 $aluno->insert();
 echo $aluno;*/
 
+/*Alterar um usuário
+$usuario = new Usuario();
+$usuario->loadById(9);
+$usuario->update("professor", "!@#$%*");
+echo $usuario;*/
+
 $usuario = new Usuario();
 
-$usuario->loadById(9);
+$usuario->loadById(8);
 
-$usuario->update("professor", "!@#$%*");
+$usuario->delete();
 
 echo $usuario;
 ?>
